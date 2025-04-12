@@ -3,7 +3,7 @@ import dearpygui.dearpygui as dpg
 import os
 from os import _exit as exitfunc
 from typing import Optional
-
+import PatchAPK as patchapk
 def GetValue(value_tag):
     return dpg.get_value(value_tag)
 def DPG_Createcontext():
@@ -17,6 +17,7 @@ def DPG_CreateViewport(titlename : str, width_int : int, height_int : int, windo
     dpg.destroy_context()
 class GUI():
     def Main_GraphicalUserInterf():
+        patchapk.CheckIfFGI_IsInstalled()
         DPG_Createcontext()
         with dpg.window(label="APKPatcher by RikkoMatsumato", tag="windows_apkpatcher", width=600, height=600):
             dpg.add_text("This is My Program for Patching .apk Games(Only works IL2Cpp Games)... \nSo Enjoy to use!!!")
