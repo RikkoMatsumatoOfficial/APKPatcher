@@ -21,6 +21,6 @@ class GUI():
         DPG_Createcontext()
         with dpg.window(label="APKPatcher by RikkoMatsumato", tag="windows_apkpatcher", width=600, height=600):
             dpg.add_text("This is My Program for Patching .apk Games(Only works IL2Cpp Games)... \nSo Enjoy to use!!!")
-            dpg.add_input_text(label="Write You're File Directory for Patching APK File", tag="fd_apkpatcher_val")
+            dpg.add_input_text(label="Write You're Compiled TypeScript or JavaScript File(index.js) for Patching APK File", tag="fd_apkpatcher_val")
             dpg.add_button(label="Patching!!!", callback=lambda:print("Coming Soon!!!"))
         DPG_CreateViewport("APKPatcher by RikkoMatsumato", 600, 600, "windows_apkpatcher")
