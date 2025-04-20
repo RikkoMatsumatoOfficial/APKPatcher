@@ -4,6 +4,9 @@ import os
 from os import _exit as exitfunc
 from typing import Optional
 import PatchAPK as patchapk
+
+def Patching():
+    return patchapk.PatchAPK(dpg.get_value("apkpatch_val"), dpg.get_value("fd_apkpatcher_val"))
 def GetValue(value_tag):
     return dpg.get_value(value_tag)
 def DPG_Createcontext():
@@ -15,12 +18,11 @@ def DPG_CreateViewport(titlename : str, width_int : int, height_int : int, windo
     dpg.set_primary_window(windowname, True)
     dpg.start_dearpygui()
     dpg.destroy_context()
-class GUI():
-    def Main_GraphicalUserInterf():
-        patchapk.CheckIfFGI_IsInstalled()
+def Main_GraphicalUserInterf():
         DPG_Createcontext()
         with dpg.window(label="APKPatcher by RikkoMatsumato", tag="windows_apkpatcher", width=600, height=600):
             dpg.add_text("This is My Program for Patching .apk Games(Only works IL2Cpp Games)... \nSo Enjoy to use!!!")
-            dpg.add_input_text(label="Write You're Compiled TypeScript or JavaScript File(index.js) for Patching APK File", tag="fd_apkpatcher_val")
-            dpg.add_button(label="Patching!!!", callback=lambda:print("Coming Soon!!!"))
+            dpg.add_input_text(label="Write You're File Directory for Patching APK File", tag="fd_apkpatcher_val")
+            dpg.add_input_text(label="Write APK File(Also Remember you're directory)!!!", tag="apkpatch_val")
+            dpg.add_button(label="Patching!!!", callback=Patching)
         DPG_CreateViewport("APKPatcher by RikkoMatsumato", 600, 600, "windows_apkpatcher")
