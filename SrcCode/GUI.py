@@ -4,11 +4,10 @@ import os
 from os import _exit as exitfunc
 from typing import Optional
 import PatchAPK as patchapk
-
-def Patching():
-    return patchapk.PatchAPK(dpg.get_value("apkpatch_val"), dpg.get_value("fd_apkpatcher_val"))
 def GetValue(value_tag):
     return dpg.get_value(value_tag)
+def Patching():
+    return patchapk.PatchAPK(GetValue("apkpatch_val"), GetValue("fd_apkpatcher_val"))
 def DPG_Createcontext():
     return dpg.create_context()
 def DPG_CreateViewport(titlename : str, width_int : int, height_int : int, windowname: Optional[str]):
