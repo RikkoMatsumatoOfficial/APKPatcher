@@ -7,5 +7,5 @@ def CheckIfFGI_IsInstalled():
         
     except:
         os.system("pip install git+https://github.com/commonuserlol/fgi")
-        print("Installed Successfully!!! Please Make Sure what Android NDK or Android Build Tools is Set as System Environment(Console Commands!!!)")
+        print("Installed Successfully!!! Please Make Sure what Android NDK or Android Build Tools is Set as System Environment(Console Commands aka conhost!!!)")
         exitfunc(3221)
