@@ -4,6 +4,8 @@ import os
 from os import _exit as exitfunc
 from typing import Optional
 import PatchAPK as patchapk
+import fgi
+import webbrowser as web_brow
 def GetValue(value_tag):
     return dpg.get_value(value_tag)
 def Patching():
@@ -24,4 +26,7 @@ def Main_GraphicalUserInterf():
             dpg.add_input_text(label="Write You're File Directory for Patching APK File", tag="fd_apkpatcher_val")
             dpg.add_input_text(label="Write APK File(Also Remember you're directory)!!!", tag="apkpatch_val")
             dpg.add_button(label="Patching!!!", callback=Patching)
+            with dpg.menu(label="Donations"):
+                dpg.add_button(label="DonationAlerts", callback=lambda: web_brow.open("https://www.donationalerts.com/r/rikkomatsumato"))
+                dpg.add_button(label="LiberaPay", callback=lambda: web_brow.open("https://liberapay.com/RikkoMatsumatoOfficial/donate"))
         DPG_CreateViewport("APKPatcher by RikkoMatsumato", 600, 600, "windows_apkpatcher")
