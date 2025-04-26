@@ -2,7 +2,7 @@
 This Is My First Program for Patching APK Games(Maybe ONLY WORKS FOR UNITY3D IL2CPP GAMES!!!)... So Enjoy to use this!!!
 
 > [!WARNING]
-> This is Only Beta Test!!!
+> This is Only Open Beta Test!!! Soon will be Full Release!!!
 
 [Join To My Discord Server](https://discord.gg/U2P5Hrcq9C)
 ## Donations
