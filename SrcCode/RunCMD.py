@@ -17,7 +17,6 @@ def PatchAPK(apk_path: str, path_indexjs : str):
         CheckIfFGI_IsInstalled()
         cmd_line = ["fgi", "-i", "{}.apk".format(apk_path), "-t script", "-l {}".format(path_indexjs),]
         delimiter_space = " "
-        print(delimiter_space.join(cmd_line))
         run_command(delimiter_space.join(cmd_line))
 
     except:
