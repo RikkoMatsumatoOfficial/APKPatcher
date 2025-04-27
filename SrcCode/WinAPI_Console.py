@@ -13,4 +13,4 @@ def freopen(filename, mode):
 def AllocateConsole():
     ImportKernel32().AllocConsole()
     freopen("CONOUT$", "w")
-    ImportKernel32().SetConsoleTitleW("APKPatcher By RikkoMatsumato(DEBUUGER)")
+    ImportKernel32().SetConsoleTitleW("APKPatcher By RikkoMatsumato(DEBUGGER)")
