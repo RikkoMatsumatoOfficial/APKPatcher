@@ -25,7 +25,7 @@ def Main_GraphicalUserInterf():
         with dpg.font_registry():
             intelonemono = dpg.add_font("{}".format(os.getcwd() + "\\INTELONEMONOITAL.ttf"), 16)
         with dpg.window(label="APKPatcher by RikkoMatsumato", tag="windows_apkpatcher", width=600, height=600):
-            dpg.add_text("This is My Program for Patching .apk Games(Only works IL2Cpp Games)... \nSo Enjoy to use!!!")
+            dpg.add_text("This is My Program for Patching .apk Games(Only works IL2Cpp Games... Maybe, I Don't Testing this!!!)... \nSo Enjoy to use!!!")
             dpg.add_input_text(label="Write You're File Directory for Patching APK File", tag="fd_apkpatcher_val")
             dpg.add_input_text(label="Write APK File(Also Remember you're directory)!!!", tag="apkpatch_val")
             dpg.add_button(label="Patching!!!", callback=Patching)
