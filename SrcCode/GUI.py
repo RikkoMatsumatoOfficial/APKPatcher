@@ -31,7 +31,7 @@ def Main_GraphicalUserInterf():
             dpg.add_button(label="Patching!!!", callback=Patching)
             with dpg.menu(label="Donations"):
                 dpg.add_button(label="DonationAlerts", callback=lambda: web_brow.open("https://www.donationalerts.com/r/rikkomatsumato"))
-                dpg.add_button(label="LiberaPay", callback=lambda: web_brow.open("https://liberapay.com/RikkoMatsumatoOfficial/donate"))
+                dpg.add_text("BTC Wallet: \nbc1qz987mqatjrhuurme49sleq75a80atysgyska9e")
         dpg.bind_font(intelonemono)
         DPG_CreateViewport("APKPatcher by RikkoMatsumato", 600, 600, "windows_apkpatcher")
         hwnd = win32gui.GetForegroundWindow()
